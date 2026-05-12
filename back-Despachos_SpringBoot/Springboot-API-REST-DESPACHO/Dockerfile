@@ -6,7 +6,8 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 RUN mvn package -DskipTests -B
 
-# Stage 2: Imagen final liviana con solo JRE
+
+# Stage 2: Imagen final liviana con solo JREd
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
